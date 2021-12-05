@@ -7,7 +7,7 @@ public class Developer extends Employee {
     private JavaDeveloper javaDeveloper;
 
     public Developer(String name, String surname, String language, String university, Long salary) {
-        super(name, surname, Function.DEVELOPER, salary);
+        super(name, surname, Position.DEVELOPER, salary);
         this.language = language;
         this.university = university;
     }
@@ -21,7 +21,7 @@ public class Developer extends Employee {
     }
 
     @Override
-    public String function(Function function) {
-        return function.getInfoFunction() + "язык разроботки - " + getLanguage() + ", ВУЗ - " + getUniversity() + ", ";
+    public String getInfoPosition(Position position) {
+        return position.getStringPosition() + "язык разроботки - " + getLanguage() + ", ВУЗ - " + getUniversity() + ", ";
     }
 }

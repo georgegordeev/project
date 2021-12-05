@@ -5,7 +5,7 @@ public class FitterEmployee extends Employee {
     private Department department;
 
     public FitterEmployee(String name, String surname, Department department, Long salary) {
-        super(name, surname, Function.FITTER, salary);
+        super(name, surname, Position.FITTER, salary);
         this.department = department;
     }
 
@@ -18,7 +18,7 @@ public class FitterEmployee extends Employee {
     }
 
     @Override
-    public String function(Function function) {
-        return function.getInfoFunction() + department.getInfoDepartment();
+    public String getInfoPosition(Position position) {
+        return position.getStringPosition() + department.getInfoDepartment();
     }
 }

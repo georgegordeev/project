@@ -27,8 +27,8 @@ public class JavaDeveloper extends Developer {
     }
 
     @Override
-    public String function(Function function) {
-        return function.getInfoFunction() + "язык разроботки - " + getLanguage() + ", ВУЗ - "
+    public String getInfoPosition(Position position) {
+        return position.getStringPosition() + "язык разроботки - " + getLanguage() + ", ВУЗ - "
                 + getUniversity() + ", стаж - " + experience + ", среда разработки - " + ide + ", ";
     }
 }

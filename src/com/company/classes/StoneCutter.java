@@ -8,7 +8,7 @@ public class StoneCutter extends Employee {
     private String newtonsLaw = "";
 
     public StoneCutter(String name, String surname, int[] lawsIndex, Long salary) {
-        super(name, surname, Function.STONE_CUTTER, salary);
+        super(name, surname, Position.STONE_CUTTER, salary);
         if (lawsIndex.length <= 3 && lawsIndex.length != 0) {
             this.lawsIndex = new int[lawsIndex.length];
             for (int i = 0; i < lawsIndex.length; i++) {
@@ -30,12 +30,12 @@ public class StoneCutter extends Employee {
     }
 
     @Override
-    public String function(Function function) {
+    public String getInfoPosition(Position position) {
         if (lawsIndex.length <= 3 && lawsIndex.length != 0) {
             for (int i = 0; i < lawsIndex.length; i++) {
                 newtonsLaw += LAWS[i] + ", ";
             }
         }
-        return function.getInfoFunction() + newtonsLaw ;
+        return position.getStringPosition() + newtonsLaw ;
     }
 }

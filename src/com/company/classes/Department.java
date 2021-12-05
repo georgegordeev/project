@@ -6,14 +6,11 @@ public enum Department {
 
     private String department;
 
-    Department() {
-    };
-
     Department(String department) {
         this.department = department;
     }
 
-    public String getDepartment() {
+    public String getEnumDepartment() {
         return department;
     }
 

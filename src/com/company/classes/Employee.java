@@ -1,16 +1,16 @@
 package com.company.classes;
 
-public abstract class Employee implements Comparable<Employee> {
+public abstract class Employee {
 
     private String name;
     private String surname;
-    private Function function;
+    private Position position;
     private Long salary;
 
-    public Employee(String name, String surname, Function function, Long salary) {
+    public Employee(String name, String surname, Position position, Long salary) {
         this.name = name;
         this.surname = surname;
-        this.function = function;
+        this.position = position;
         this.salary = salary;
     }
 
@@ -22,8 +22,8 @@ public abstract class Employee implements Comparable<Employee> {
         return surname;
     }
 
-    public Function getFunction() {
-        return function;
+    public Position getPosition() {
+        return position;
     }
 
     public Long getSalary() {
@@ -38,15 +38,15 @@ public abstract class Employee implements Comparable<Employee> {
         this.surname = surname;
     }
 
-    protected void setFunction(Function function) {
-        this.function = function;
+    protected void setPosition(Position position) {
+        this.position = position;
     }
 
     public void setSalary(Long salary) {
         this.salary = salary;
     }
 
-    public abstract String function(Function function);
+    public abstract String getInfoPosition(Position position);
 
     public String getStringSalary(Long salary) {
         int penny = (int) (getSalary() % 100);
@@ -60,18 +60,7 @@ public abstract class Employee implements Comparable<Employee> {
     public String getInfo() {
 
         return getName() + " " + getSurname() + ": "
-                + function(getFunction()) + "зарплата - " + getStringSalary(salary) + ".";
+                + getInfoPosition(getPosition()) + "зарплата - " + getStringSalary(salary) + ".";
     }
 
-    @Override
-    public int compareTo(Employee e) {
-        long dif = this.getSalary() - e.getSalary();
-        if (dif == 0) {
-            return 0;
-        } else if (dif > 0) {
-            return 1;
-        } else {
-            return -1;
-        }
-    }
 }
