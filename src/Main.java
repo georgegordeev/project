@@ -1,9 +1,5 @@
-import com.company.classes.*;
 import com.company.repository.EmployeeRepository;
 import com.company.service.EmployeeService;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {

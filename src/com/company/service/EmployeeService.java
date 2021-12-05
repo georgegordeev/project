@@ -1,6 +1,6 @@
 package com.company.service;
 
-import com.company.classes.Employee;
+import com.company.models.Employee;
 import com.company.repository.EmployeeRepository;
 
 import java.util.Comparator;

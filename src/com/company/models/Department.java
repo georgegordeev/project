@@ -1,4 +1,4 @@
-package com.company.classes;
+package com.company.models;
 
 public enum Department {
     GUILD ("цех"),
